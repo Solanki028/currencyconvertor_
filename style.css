@@ -1,0 +1,132 @@
+ 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color:#e74c3c;
+  font-family: 'Arial', sans-serif;
+}
+ 
+.container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  position: relative;  
+}
+
+ 
+h2 {
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+ 
+form select,
+button,
+input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+ 
+form input {
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+ 
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+ 
+.select-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.select-container img {
+  max-width: 32px;
+  margin-right: 0.5rem;
+}
+
+ 
+form button {
+  height: 3rem;
+  background-color: #af4d98;
+  color: #fff;
+  font-size: 1.15rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;  
+  position: relative;  
+  margin-left: 0.2rem;  
+}
+
+form button:hover {
+  background-color: #9a3e80;  
+}
+
+form button:active {
+  background-color: #7d2e65;  
+  transform: scale(0.98); 
+}
+
+form button:focus {
+  outline: none;  
+  box-shadow: 0 0 0 3px rgba(175, 77, 152, 0.5);  
+}
+
+
+ 
+.msg {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 1rem;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.spinner div {
+  width: 2rem;
+  height: 2rem;
+  border: 0.25rem solid #ddd;
+  border-top: 0.25rem solid #af4d98;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+input.error {
+  border-color: #e74c3c; 
+}
